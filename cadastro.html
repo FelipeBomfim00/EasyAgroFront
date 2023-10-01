@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body id="login">
+    <main>
+        <form id="cadastro" method="post">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/html-css/veiculos/veiculos.html">
+            <fieldset id="cad-pessoal">
+                <p>
+                    <label for="iname">Nome de Usuário</label><br>
+                    <input type="name" name="name" id="iname" placeholder="Digite seu Nome" required>
+                </p>
+                <p>
+                    <label for="iemail">Email</label><br>
+                    <input type="email" name="email" id="iemail" placeholder="Digite seu Email" required>
+                </p>  
+                <p>
+                    <label for="isenha">Senha</label><br>
+                    <input type="password" name="Senha" id="isenha" placeholder="Digite sua senha" required>
+                </p>
+                <p>
+                    <label for="icpf">CPF/CNPJ</label><br>
+                    <input type="number" name="cpf" id="icpf" maxlength="12" placeholder="Digite seu CPF/CNPJ - (somente números)" required>
+                </p>
+                <p>
+                    <label for="inasc">Data de Nascimento</label><br>
+                    <input type="date" name="nasc" id="inasc" placeholder="XX/XX/XXX" maxlength="8" required>
+                </p>
+            </fieldset>  
+            <fieldset id="cad-endereco">
+                <p>
+                    <label for="icidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="icidade" placeholder="Digite sua Cidade ">
+                </p>
+                <p>
+                    <label for="iestado">Cidade</label><br>
+                    <input type="text" name="estado" id="iestado" placeholder="Digite seu Estado (apenas a sigla) ">
+                </p>
+                <p>
+                    <label for="icep">CEP</label><br>
+                    <input type="number" name="cep" id="icep" placeholder="Digite seu CEP ">
+                </p>
+            </fieldset>
+            <fieldset id="cad-loc">     
+                <p class="loc-wrapper">
+                    <legend>Deseja ser locador ou locatário?</legend>
+                    
+                    <input type="radio" name="loc" id="ilocador" class="checkbox"><label for="ilocador">Locador</label><br>
+                    <input type="radio" name="loc" id="ilocatario" class="checkbox"><label for="ilocatario">Locatário</label><br>
+                    <input type="radio" name="loc" id="iambos"><label for="iambos">Ambos</label><br>
+                </p>
+            </fieldset>
+            <fieldset id="cad-term">        
+                <p>
+                    Leia e certifique-se que concorda com nossos <a href="#">Termos de uso</a> e <a href="#">Privacidade</a>.<br>
+                    <input type="checkbox" name="privacidade" id="iprivacidade" class="checkbox"><label for="iprivacidade" class="label-checkbox">Eu concordo com a Privacidade</label><br>
+                    <input type="checkbox" name="termos" id="itermos" class="checkbox"><label for="itermos">Eu concordo com os Termos</label><br>
+                </p>
+            </fieldset>     
+                <p><input class="button" type="submit" value="Registrar"></p>
+        </form>
+        <p id="esperamos">
+            Te esperamos aqui desse lado!
+        </p>
+    </main>
+</body>
+</html>

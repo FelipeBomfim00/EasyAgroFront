@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,700;1,400&display=swap');
+
+:root{
+
+    --cor1: #004042;
+    --cor2: #D8AC55;
+    --cor3: #EBE3C7;
+    --cor4: transparent;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Kantumruy Pro', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonte-destaque);
+    text-decoration: none;
+}
+
+html {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    box-sizing: border-box;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-decoration: none;
+    align-items: center;
+    height: 70px;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+main {
+    background-color: var(--cor3);
+    padding-top: 2rem;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+    font-size: 0.8rem;
+}
+
+footer {
+    background-color: var(--cor3);
+}
+
+.nav-footer{
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: var(--cor2);
+    width: 80vw;
+    padding-bottom: 20rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: var(--cor1);
+    text-decoration: none;
+    align-items: center;
+    height: 90px;
+    padding: 1rem;
+    justify-content: space-around;
+    position: center;
+}
+
+#footer-icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+#footer-icons i:hover {
+    color: var(--cor3);
+}
+
+#footer-links {
+    display: flex;
+    font-size: 0.7rem;
+    margin-left: 1.2rem;
+    justify-content: space-around;
+}
+
+a {
+    color: var(--cor1);
+    text-decoration: none !important;
+    font-family: var(--fonte-destaque);
+}
+
+a:hover {
+    color: var(--cor3);
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#btn-mobile {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#btn-mobile:hover {
+    color: var(--cor3);
+}
+
+/*--------------------menu responsivo -------------*/
+@media (max-width: 800px) {
+    #btn-mobile {
+        display: block;
+    }
+    #menu {
+        display: none;
+    }
+    #nav.active #menu {
+        display: flex;
+    }
+}
+/*--------------------fim menu responsivo -------------*/
+
+img {
+    max-width: 280px;
+}
+
+#menu li {
+    display: block;
+    padding: .5rem;
+}
+
+.maquinas{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cor3);
+    padding-top: 2em;
+    justify-content: center;
+}
+
+.escavadeiras {
+    background-color: var(--cor3);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: block;
+    flex-direction: column;
+    background-color: white;
+    width: 280px;
+    border-radius: 0 0 15px 15px;
+    margin: 2em;
+}
+
+p {
+    margin: 2px 15px;
+}
+
+.valor {
+    color: rgb(221, 49, 49);
+}
+
+.info1 {
+    margin: 10px 0 0 10px;
+}
+
+.info2 {
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-end;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+
+#page-seguros {
+    background-color: var(--cor3);
+}
+
+.container-seguros, .container-parceiros {
+    margin: auto;
+    display: flex;
+    margin-block: 3rem;
+    width: 70vw;
+    
+}
+
+#seguros h1, #parceiros h1 {
+    background-color: var(--cor1);
+    width: 60vw;
+    margin: auto;
+    padding-top: 2rem;
+    text-align: center;
+    color: var(--cor3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#seguros .seguro-texto, #parceiros .parceiros-texto {
+    display: block;
+    background-color: white;
+    color: #004042;
+    margin: auto;
+    padding-left: 2em;
+    padding-right: 90px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    height: 100px;
+    font-size: .8rem;
+    width: 80vw;
+}
+
+#btn-simule {
+    width: 300px;
+    height: 120px;
+    background: #D8AC55;
+    border-radius: 0px 8px 8px 0px;
+    border: none;
+    cursor: pointer;
+    align-items: start;
+}
+
+.parceiros-img {
+    cursor: pointer;
+    align-items: start;
+}
+
+@media (max-width: 600px) {
+    #btn-simule {
+        width: 100px;
+    }
+}
+
+@media  (max-width: 900px) and (min-width: 601px) {
+    #btn-simule {
+        width: 200px;
+    }
+}
